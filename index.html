@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Yeng Rothara!</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .gallery img {
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        /* Style for centering the video */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* Mobile styling (screen width 600px or smaller) */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.2em;
+            }
+            .gallery {
+                display: block;
+                gap: 10px;
+            }
+            .gallery img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .video-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .countdown {
+            font-size: 2em;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Happy Birthday, Yeng Rothara! 🎉</h1>
+    <p>Today is a special day because it's your day! Here's a little surprise just for you.</p>
+    <div class="countdown" id="countdown"></div>
+
+    <script>
+        // Countdown to the birthday
+        const countDownDate = new Date("Oct 22, 2024 00:00:00").getTime();
+        const countdownElement = document.getElementById("countdown");
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(x);
+                countdownElement.innerHTML = "🎉 It's your birthday! 🎉";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+<div class="gallery">
+    <img src="image/image1.png" alt="Memory 1">
+    <img src="image/image2.png" alt="Memory 2">
+    <img src="image/image3.png" alt="Memory 3">
+</div>
+
+<style>
+    .gallery {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    .gallery img {
+        width: 200px;
+        border-radius: 10px;
+    }
+</style>
+<div class="video-container">
+    <iframe width="560" height="315" src="image/New_yearr.mp4" frameborder="0" allowfullscreen></iframe>
+</div>
